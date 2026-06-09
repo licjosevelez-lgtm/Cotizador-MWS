@@ -1,0 +1,228 @@
+/* print-fix.css */
+
+/* Define variables in HEX for .pdf-export and .safe-colors to replace Tailwind OKLCH/OKLAB defaults */
+:root.safe-colors,
+html.safe-colors,
+body.safe-colors,
+.safe-colors,
+.pdf-export {
+  --color-slate-50: #f8fafc !important;
+  --color-slate-100: #f1f5f9 !important;
+  --color-slate-200: #e2e8f0 !important;
+  --color-slate-300: #cbd5e1 !important;
+  --color-slate-400: #94a3b8 !important;
+  --color-slate-500: #64748b !important;
+  --color-slate-600: #475569 !important;
+  --color-slate-700: #334155 !important;
+  --color-slate-800: #1e293b !important;
+  --color-slate-900: #0f172a !important;
+  --color-slate-950: #020617 !important;
+
+  --color-gray-50: #f9fafb !important;
+  --color-gray-100: #f3f4f6 !important;
+  --color-gray-200: #e5e7eb !important;
+  --color-gray-300: #d1d5db !important;
+  --color-gray-400: #9ca3af !important;
+  --color-gray-500: #6b7280 !important;
+  --color-gray-600: #4b5563 !important;
+  --color-gray-700: #374151 !important;
+  --color-gray-800: #1f2937 !important;
+  --color-gray-900: #111827 !important;
+  --color-gray-950: #030712 !important;
+
+  --color-red-50: #fef2f2 !important;
+  --color-red-100: #fee2e2 !important;
+  --color-red-200: #fecaca !important;
+  --color-red-300: #fca5a5 !important;
+  --color-red-400: #f87171 !important;
+  --color-red-500: #ef4444 !important;
+  --color-red-600: #dc2626 !important;
+  --color-red-700: #b91c1c !important;
+
+  --color-emerald-50: #ecfdf5 !important;
+  --color-emerald-100: #d1fae5 !important;
+  --color-emerald-200: #a7f3d0 !important;
+  --color-emerald-500: #10b981 !important;
+  --color-emerald-600: #059669 !important;
+  --color-emerald-700: #047857 !important;
+
+  --color-indigo-50: #e0e7ff !important;
+  --color-indigo-100: #c7d2fe !important;
+  --color-indigo-200: #a5b4fc !important;
+  --color-indigo-400: #818cf8 !important;
+  --color-indigo-500: #6366f1 !important;
+  --color-indigo-600: #4f46e5 !important;
+  --color-indigo-700: #4338ca !important;
+
+  --color-primary-blue: #1e3a8a !important;
+  --color-header-blue: #5b9bd5 !important;
+  --color-light-blue: #bdd7ee !important;
+}
+
+/* Helper rules nested under selector list to ensure no oklch leakages */
+.pdf-export,
+.pdf-export *,
+.safe-colors,
+.safe-colors * {
+  color-scheme: light !important;
+}
+
+/* Explicit class-level overrides in high-specificity HEX to support older rendering parsers */
+.pdf-export .bg-white,
+.safe-colors .bg-white {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
+
+.pdf-export .bg-\[\#5B9BD5\],
+.safe-colors .bg-\[\#5B9BD5\] {
+  background-color: #5b9bd5 !important;
+  background: #5b9bd5 !important;
+  color: #ffffff !important;
+}
+
+.pdf-export .bg-\[\#BDD7EE\],
+.safe-colors .bg-\[\#BDD7EE\] {
+  background-color: #bdd7ee !important;
+  background: #bdd7ee !important;
+  color: #000000 !important;
+}
+
+.pdf-export .bg-slate-50\/50,
+.safe-colors .bg-slate-50\/50,
+.pdf-export .bg-slate-50,
+.safe-colors .bg-slate-50 {
+  background-color: #f8fafc !important;
+  background: #f8fafc !important;
+}
+
+.pdf-export .text-white,
+.safe-colors .text-white {
+  color: #ffffff !important;
+}
+
+.pdf-export .text-slate-800,
+.safe-colors .text-slate-800 {
+  color: #1e293b !important;
+}
+
+.pdf-export .text-slate-900,
+.safe-colors .text-slate-900 {
+  color: #0f172a !important;
+}
+
+.pdf-export .text-slate-500,
+.safe-colors .text-slate-500 {
+  color: #64748b !important;
+}
+
+.pdf-export .text-slate-700,
+.safe-colors .text-slate-700 {
+  color: #334155 !important;
+}
+
+.pdf-export .border,
+.pdf-export .border-2,
+.pdf-export .border-x-2,
+.pdf-export .border-b-2,
+.pdf-export .border-r-2,
+.pdf-export .border-b,
+.pdf-export .border-r,
+.safe-colors .border,
+.safe-colors .border-2,
+.safe-colors .border-x-2,
+.safe-colors .border-b-2,
+.safe-colors .border-r-2,
+.safe-colors .border-b,
+.safe-colors .border-r {
+  border-color: #000000 !important;
+}
+
+.pdf-export .border-slate-200,
+.safe-colors .border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+
+.pdf-export .divide-black > * + *,
+.safe-colors .divide-black > * + * {
+  border-color: #000000 !important;
+}
+
+/* Standalone print media stylesheet rules */
+@media print {
+  :root, html, body {
+    --color-slate-50: #f8fafc !important;
+    --color-slate-100: #f1f5f9 !important;
+    --color-slate-200: #e2e8f0 !important;
+    --color-slate-300: #cbd5e1 !important;
+    --color-slate-400: #94a3b8 !important;
+    --color-slate-500: #64748b !important;
+    --color-slate-600: #475569 !important;
+    --color-slate-700: #334155 !important;
+    --color-slate-800: #1e293b !important;
+    --color-slate-900: #0f172a !important;
+    --color-slate-950: #020617 !important;
+
+    --color-gray-50: #f9fafb !important;
+    --color-gray-100: #f3f4f6 !important;
+    --color-gray-200: #e5e7eb !important;
+    --color-gray-300: #d1d5db !important;
+    --color-gray-400: #9ca3af !important;
+    --color-gray-500: #6b7280 !important;
+    --color-gray-600: #4b5563 !important;
+    --color-gray-700: #374151 !important;
+    --color-gray-800: #1f2937 !important;
+    --color-gray-900: #111827 !important;
+    --color-gray-950: #030712 !important;
+  }
+
+  .bg-white {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+  }
+  .bg-\[\#5B9BD5\] {
+    background-color: #5b9bd5 !important;
+    background: #5b9bd5 !important;
+    color: #ffffff !important;
+  }
+  .bg-\[\#BDD7EE\] {
+    background-color: #bdd7ee !important;
+    background: #bdd7ee !important;
+    color: #000000 !important;
+  }
+  .bg-slate-50\/50,
+  .bg-slate-50 {
+    background-color: #f8fafc !important;
+    background: #f8fafc !important;
+  }
+  .text-white {
+    color: #ffffff !important;
+  }
+  .text-slate-800 {
+    color: #1e293b !important;
+  }
+  .text-slate-900 {
+    color: #0f172a !important;
+  }
+  .text-slate-500 {
+    color: #64748b !important;
+  }
+  .text-slate-700 {
+    color: #334155 !important;
+  }
+  .border,
+  .border-2,
+  .border-x-2,
+  .border-b-2,
+  .border-r-2,
+  .border-b,
+  .border-r {
+    border-color: #000000 !important;
+  }
+  .border-slate-200 {
+    border-color: #e2e8f0 !important;
+  }
+  .divide-black > * + * {
+    border-color: #000000 !important;
+  }
+}

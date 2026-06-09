@@ -1,0 +1,6 @@
+{
+  "name": "Sistema de Cotizaciones Industriales",
+  "description": "Sistema para cálculo de costo hora máquina, administración de números de parte de clientes, especificaciones de proceso y cálculo reactivo de precios de venta con generación de formato de cotización.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
